@@ -1,0 +1,17 @@
+.teacher-detail.td{}
+    .td.photo{width:300rpx;height:300rpx;padding:40rpx;position:relative;left:50%;transform:translate(-50%,0)}
+    .td.info_box{width:calc(100% - 100rpx);padding:0 40rpx 40rpx 40rpx;}
+    .td.info_title{margin-bottom:30rpx;}
+    .td.info_line{width:4rpx;height:40rpx;background-color:#e9418e;display:inline-block;margin-right:20rpx;vertical-align:middle;}
+    .td.info_message{font-size:28rpx;color:#666;text-align:justify;text-indent:56rpx;line-height:52rpx;margin-bottom:40rpx;}
+    .td.name{text-align:center;padding-bottom:20rpx;color:#666;font-size:40rpx;}
+    .td.name text{font-size:24rpx;}
+    .td.button{background-color:#e9418e;font-weight:normal;}
+    .td.a{}
+    .td.a{}
+    .td.a{}
+    .td.a{}
+    .td.a{}
+    .td.a{}
+    .td.a{}
+    .td.a{}

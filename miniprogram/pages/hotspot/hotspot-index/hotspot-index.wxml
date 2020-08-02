@@ -1,0 +1,64 @@
+<view class="hotspot-index hi">
+
+  <scroll-view class="hi tab-box" scroll-x="true" style="width: 100%">
+    <view  wx:for="{{tabs}}" wx:key="index"
+           class="hi tab scroll-view-item_H {{index === tabIndex ? 'tab_select' : ''}}"
+           bindtap="tabSelect" data-index="{{index}}"
+    >{{item.title}}</view>
+  </scroll-view>
+
+  <!--<view class="hi menu">-->
+    <!--<view style="margin:28rpx 0 0 25rpx;">-->
+      <!--<view class="hi menu-line"></view>-->
+      <!--<view class="hi menu-line"></view>-->
+      <!--<view class="hi menu-line"></view>-->
+    <!--</view>-->
+  <!--</view>-->
+
+
+
+
+  <swiper class="hi swiper-box" current="{{tabIndex}}" bindchange="swiperChange" duration="{{duration}}"
+          bindanimationfinish="swiperChangeFinish" >
+    <swiper-item class="hi swiper" wx:for="{{tabs}}" wx:key="index" wx:for-item="tabs" wx:for-index="index1"
+                 data-index="{{index}}"
+    >
+      <scroll-view scroll-y="true" style="max-height:calc(100vh - 80rpx);">
+
+        <view class="hi activity-box"  wx:for="{{contentList}}" wx:key="index" wx:for-index="index2"
+              wx:if="{{item.type === tabs.value || (item.isHot === true && index1 === 0)}}"
+              data-id="{{item.id}}" bindtap="goHotspotDetail"
+        >
+          <image class="hi photo" src="{{item.imageUrl || '-'}}"></image>
+          <view class="hi activity">
+          <view class="hi title">{{item.title}}</view>
+            <view class="hi message">
+              <view class="hi date" wx:if="{{item.time}}">{{item.time}}</view>
+              <view class="hi status status0" wx:if="{{item.status === 0 && item.type === 'activity'}}">已结束</view>
+              <view class="hi status status1" wx:if="{{item.status === 1 && item.type === 'activity'}}">进行中</view>
+              <view class="hi status status2" wx:if="{{item.status === 2 && item.type === 'activity'}}">报名中</view>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+
+  <view class="hi contact_box" wx:if="{{contactShow}}">
+    <image class="hi contact_icon" src="/images/icon_contact_cancel.png" bindtap="clearContact"></image>
+    <view class="hi contact_text">象上咨询一手掌握，活动福利不再错过</view>
+    <!--<button class="hi contact_btn" size="mini" open-type="contact">开启通知</button>-->
+    <button class="hi contact_btn" size="mini" bindtap="showNotice">开启通知</button>
+  </view>
+
+
+  <dialog id='dialog' title='取消订单'
+          content='是否取消订单'  isContact="{{true}}"
+          confirm='立即关注' cancel="再看看" hasCancel="{{true}}" isCustom="{{true}}"
+          bind:cancelEvent="_cancelEvent"
+          bind:confirmEvent="_confirmEvent">
+  </dialog>
+
+</view>

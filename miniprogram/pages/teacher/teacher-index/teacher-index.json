@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "象上名师",
+  "usingComponents": {
+    "tab": "/components/Tab/Tab",
+    "list": "/components/List/List"
+  }
+}

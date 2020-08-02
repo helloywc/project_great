@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/funtion/test/test",
+    "pages/index/index",
+    "pages/present/present",
+    "pages/centre/centre-detail/centre-detail",
+    "pages/centre/centre-index/centre-index",
+    "pages/course/course-detail/course-detail",
+    "pages/course/course-index/course-index",
+    "pages/student/student-detail/student-detail",
+    "pages/student/student-index/student-index",
+    "pages/teacher/teacher-detail/teacher-detail",
+    "pages/teacher/teacher-index/teacher-index",
+    "pages/hotspot/hotspot-detail/hotspot-detail",
+    "pages/hotspot/hotspot-index/hotspot-index",
+    "pages/funtion/operate-index/operate-index",
+    "pages/funtion/gallery/gallery",
+    "pages/funtion/blank/blank"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e9418e",
+    "navigationBarTitleText": "象上小学生",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#29abe2",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/hotspot/hotspot-index/hotspot-index",
+        "iconPath": "images/icon/icon_index_00.png",
+        "selectedIconPath": "images/icon/icon_index_01.png",
+        "text": "场馆效果"
+      },
+      {
+        "pagePath": "pages/course/course-index/course-index",
+        "iconPath": "images/icon/icon_index_10.png",
+        "selectedIconPath": "images/icon/icon_index_11.png",
+        "text": "场地实景"
+      },
+      {
+        "pagePath": "pages/teacher/teacher-index/teacher-index",
+        "iconPath": "images/icon/icon_index_20.png",
+        "selectedIconPath": "images/icon/icon_index_21.png",
+        "text": "最新优惠"
+      },
+      {
+        "pagePath": "pages/centre/centre-index/centre-index",
+        "iconPath": "images/icon/icon_index_30.png",
+        "selectedIconPath": "images/icon/icon_index_31.png",
+        "text": "园区导航"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+
+######################
+# Intellij
+######################
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+.history
+
+/dist
+/node_modules/
+node_modules/
+
+
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+*.class
+*.*~
+*~
+.merge_file*
+
+
+######################
+# ESLint
+######################
+.eslintcache
+
+package-lock.json
+.vscode/settings.json
+package-lock.json
+/dist

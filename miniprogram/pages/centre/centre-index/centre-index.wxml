@@ -1,0 +1,47 @@
+<view class="centre-index ci">
+
+  <map id="map"
+       class="ci map"
+       bindtap="mapTap"
+       subkey="{{subKey}}"
+       longitude="{{longitude}}"
+       latitude="{{latitude}}"
+       scale="11"
+       controls="{{controls}}"
+       bindcontroltap="controltap"
+       markers="{{markers}}"
+       bindmarkertap="markertap"
+       polyline="{{polyline}}"
+       bindregionchange="regionchange"
+       show-location
+  >
+
+  </map>
+
+  <view class="ci label_suggest" bindtap="searchNearby">
+    请选一个距离最近的小象，或<text class="ci near">点此</text>选择最近校区
+  </view>
+
+  <view class="ci label_box" wx:if="{{labelShow}}">
+    <view class="ci title">
+      <text>{{selectMarker.name || '-'}}</text>
+      <text class="ci distance" wx:if="{{selectMarker.distance}}">{{selectMarker.distance}}km</text>
+    </view>
+    <view class="ci address">{{selectMarker.address || '-'}}</view>
+    <view class="ci btn_box">
+      <view class="ci btn" bindtap="navigation">
+        <image class="ci btn_icon" src="/images/icon_centre_1.png"></image>
+        <text class="ci btn_title">地图导航</text>
+      </view>
+      <view class="ci btn" bindtap="contactCentre">
+        <image class="ci btn_icon" src="/images/icon_centre_2.png"></image>
+        <text class="ci btn_title">联系校区</text>
+      </view>
+      <view class="ci btn" bindtap="showDetail">
+        <image class="ci btn_icon" src="/images/icon_centre_3.png"></image>
+        <text class="ci btn_title">查看详情</text>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,50 @@
+<view class="list_box">
+  <scroll-view class="list" bindscrolltoupper="toUpper" bindscrolltolower="toLower" scroll-y
+               upper-threshold="10" lower-threshold="200" scroll-top="200"
+               bindtouchstart="touch1" bindtouchend="touch2"
+  >
+
+    <!--下拉刷新，因为兼容性不足弃用-->
+    <!--<view class="loading {{loading1 ? 'loading_show' :''}}" >-->
+    <!--<view>数据刷新中</view>-->
+    <!--</view>-->
+
+    <!--插槽-->
+    <slot name="list_slot">
+
+    </slot>
+
+    <!--上拉加载，因为兼容性不足弃用-->
+    <!--<view class="loading {{loading2 ? 'loading_show' :''}}" >-->
+    <!--<view>数据加载中</view>-->
+    <!--</view>-->
+
+    <!--<view wx:if="{{isLast}}" class="list_last">已加载全部记录</view>-->
+    <view wx:if="{{isLast}}" class="list_last" hidden="{{noLast}}">已经到底啦~</view>
+
+  </scroll-view>
+
+  <view class="nodata_box" wx:if="{{noData && size === 'normal'}}">
+    <image src="{{imgUrl}}" ></image>
+    <image class="nodata_image" src="{{imgUrl}}" ></image>
+    <view class="info">{{text}}</view>
+  </view>
+
+  <view class="nodata_box" wx:if="{{isError && size === 'normal'}}" bindtap="toUpper">
+    <image src="{{imgUrl}}" ></image>
+    <view class="info">出错啦 {{face}}，点此刷新或回退</view>
+  </view>
+
+
+  <view class="nodata" wx:if="{{noData && size === 'mini'}}">
+    <image class="nodata_image" src="{{imgUrl}}"></image>
+    <view class="nodata_msg">{{text}}</view>
+  </view>
+
+  <view class="nodata_box" wx:if="{{isError && size === 'mini'}}" bindtap="toUpper">
+    <image class="nodata_image" src="{{imgUrl}}"></image>
+    <view class="nodata_msg">出错啦 {{face}}，点此刷新或回退</view>
+  </view>
+
+</view>
+

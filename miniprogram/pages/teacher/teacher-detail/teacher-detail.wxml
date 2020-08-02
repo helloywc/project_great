@@ -1,0 +1,20 @@
+<view class="teacher-detail td">
+  <image class="td photo" src="{{item.photo}}"></image>
+  <view class="td info_box">
+
+    <view class="td name">{{item.name || '-'}} <text>老师</text></view>
+
+    <view class="td info_title"> <view class="td info_line"></view>从业经历</view>
+    <view class="td info_message">{{item.exprence || '-'}}</view>
+
+    <view class="td info_title"> <view class="td info_line"></view>教育格言</view>
+    <view class="td info_message">{{item.motto || '-'}}</view>
+
+    <view class="td info_title"> <view class="td info_line"></view>证书编号</view>
+    <view class="td info_message" wx:if="{{item.licence}}">{{item.licence}}</view>
+
+
+    <button wx:if="{{scene !== 1001}}" class="td button" type="primary" bindtap="moreTeacher">了解更多象上名师</button>
+
+  </view>
+</view>

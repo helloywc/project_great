@@ -1,0 +1,14 @@
+/* miniprogram/pages/operate/test/test.wxss */
+
+.hi.contact_box{width:calc(100% - 40rpx);margin:0 20rpx;height:60rpx;background-color:#ccc;position:absolute;bottom:220rpx;left:0;border-radius:10rpx;
+    display:flex;flex-direction:row;justify-content: space-between;align-items:center;
+}
+.hi.contact_icon{width:40rpx;height:40rpx;margin:10rpx;}
+.hi.contact_text{font-size:26rpx;color:#fff;line-height:80rpx;}
+.hi.contact_btn{}
+.hi.contact_btn[size='mini']{font-size:24rpx;height:40rpx;line-height:40rpx;margin-right:10rpx;font-weight:normal;color:#fff;border:1rpx solid #fff;}
+.hi.contact_btn::after{}
+
+/*.test{display:flex;flex-direction:row;justify-content:flex-start;}*/
+
+button[size='mini']{margin:10rpx;}

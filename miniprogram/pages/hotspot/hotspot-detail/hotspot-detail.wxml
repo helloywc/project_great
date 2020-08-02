@@ -1,0 +1,4 @@
+<view class="hotspot-detail hd">
+  <web-view class="hd webview" wx:if="{{obj.model === 'web'}}" src="{{obj.url}}"></web-view>
+
+</view>

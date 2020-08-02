@@ -1,0 +1,17 @@
+<view class="gallery g">
+  <swiper class="g swiper-box" current="{{index}}" bindchange="swiperChange">
+    <swiper-item wx:for="{{galleryList}}" wx:key="index">
+      <image class="g photo" src="{{item.url}}" data-index="{{index}}"
+             style="width:750rpx;height:{{item.height}}rpx;"
+             bindload="imageLoad"></image>
+      <!--<view class="g text-box">-->
+        <!--<view class="g title">123123</view>-->
+        <!--<view class="g message">123123</view>-->
+      <!--</view>-->
+    </swiper-item>
+  </swiper>
+  <view class="g text-box" wx:if="{{galleryList[galleryIndex].message}}">
+    <view class="g title">{{galleryList[galleryIndex].title || '-'}}</view>
+    <view class="g message">{{galleryList[galleryIndex].message || '-'}}</view>
+  </view>
+</view>

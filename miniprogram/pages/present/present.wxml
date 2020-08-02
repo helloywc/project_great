@@ -1,0 +1,167 @@
+<view class="present p">
+  <swiper class="p gallery_box" vertical="true" current="{{swiperIndex}}"
+          bindchange="bindchange"
+  >
+
+
+
+
+    <!--欢迎图-->
+    <swiper-item>
+      <image class="p bg_image" src="/images/pic_present_1.jpg"></image>
+      <image class="p logo" src="/images/logo_0.png"></image>
+      <view class="p invite">邀您与孩子共度一场奇妙之旅</view>
+    </swiper-item>
+
+    <!--概览-->
+    <swiper-item class="p gallery">
+      <image class="p top_image p2" src="/images/pic_present_2.png"></image>
+      <view class="p msg_box">
+        <view class="p btn_box">
+          <view class="p btn" bindtap="goPage" data-index="2">教学服务</view>
+          <view class="p btn" bindtap="goPage" data-index="4">优秀师资</view>
+          <view class="p btn" bindtap="goPage" data-index="3">小初精品课</view>
+          <view class="p btn" bindtap="goPage" data-index="5">学习环境</view>
+        </view>
+      </view>
+      <view class="p choose">点击您最关注的<text class="p triangle"></text></view>
+    </swiper-item>
+
+    <!--教学服务-->
+    <swiper-item class="p gallery">
+      <image class="p md_image p3" src="/images/pic_present_3.png"></image>
+      <view class="p title_box">
+        <view class="p title">教学服务</view>
+        <view class="p subtitle">精细化每个学细节是我们至始至终的追求</view>
+        <view class="p subtitle">专为教学提供无微不至的服务</view>
+      </view>
+      <view class="p label_box">
+        <view class="p label_line">
+          <view class="p label2">miga 教学法</view>
+          <view class="p label2">3-3-3 教学服务</view>
+        </view>
+        <view class="p label_line">
+          <view class="p label2">STCT 模块教学法</view>
+        </view>
+        <view class="p btn2" bindtap="goService">详细了解</view>
+      </view>
+    </swiper-item>
+
+    <!--精品课程-->
+    <swiper-item class="p gallery" style="background-color:#2a2a2a;">
+      <image class="p md_image p3" src="/images/pic_present_5.jpg"></image>
+      <view class="p bg_2"></view>
+      <view class="p title_box">
+        <view class="p title reverse">精品课程</view>
+        <view class="p subtitle reverse">深入研究孩子的学习需求</view>
+        <view class="p subtitle reverse">只为让孩子更适应环境，更享受学习</view>
+      </view>
+      <view class="p label_box" >
+        <view class="p label_line">
+          <view class="p label reverse">语数英培优</view>
+          <view class="p label reverse">优+作文</view>
+          <view class="p label reverse">幼小衔接</view>
+        </view>
+        <view class="p label_line">
+          <view class="p label reverse">识字写字</view>
+          <view class="p label reverse">自然拼读</view>
+          <view class="p label reverse">择校课程</view>
+        </view>
+        <view class="p btn2 reverse" bindtap="goCourse">详细了解</view>
+      </view>
+    </swiper-item>
+
+    <!--师资建设-->
+    <swiper-item class="p gallery">
+      <image class="p md_image p5" src="/images/pic_present_6.png"></image>
+      <view class="p title_box">
+        <view class="p title">师资建设</view>
+        <view class="p subtitle">专业教研是引导孩子的关键所在</view>
+        <view class="p subtitle">我们始终师资力量放在第一位</view>
+      </view>
+      <view class="p label_box">
+        <view class="p label_line">
+          <view class="p label">专业教研</view>
+          <view class="p label">严格负责</view>
+        </view>
+        <view class="p label_line">
+          <view class="p label">讲解清晰</view>
+          <view class="p label">循循善诱</view>
+        </view>
+        <view class="p btn2" bindtap="goTeacher">了解象上名师</view>
+      </view>
+    </swiper-item>
+
+    <!--教学环境-->
+    <swiper-item class="p gallery">
+      <image class="p md_image p4" src="/images/pic_present_4.png"></image>
+      <view class="p title_box">
+        <view class="p title">极致简美</view>
+        <view class="p subtitle">优雅的教学空间安静而私密</view>
+        <view class="p subtitle">提升专注并激发潜力</view>
+      </view>
+      <view class="p label_box">
+        <view class="p label_line">
+          <view class="p label">优雅恬静</view>
+          <view class="p label">宽敞明亮</view>
+          <view class="p label">设施齐全</view>
+        </view>
+        <view class="p label_line">
+          <view class="p label">简洁专注</view>
+          <view class="p label">持久舒适</view>
+          <view class="p label">交通便捷</view>
+        </view>
+        <view class="p btn2" bindtap="goCentre">寻找最近的校区</view>
+      </view>
+    </swiper-item>
+
+    <!--精品课程-->
+    <swiper-item class="p gallery">
+      <image class="p smile" src="/images/pic_present_smile.png"></image>
+      <view class="p title_box2">
+        <view class="p subtitle2">感谢您的耐心了解</view>
+        <view class="p subtitle2">我们会安排一位专业的咨询顾问为您服务</view>
+      </view>
+      <view class="p title_box3">
+        <view class="p subtitle">您也可以选择以下标签</view>
+        <view class="p subtitle">让我们能更为了解您的需求（选填）</view>
+      </view>
+
+      <!--选择标签-->
+      <view class="p tab_box">
+
+        <view class="p tab_title">类型</view>
+        <view class="p tab_line">
+          <view class="p tab {{item.select ? 'tab_select' : ''}}" wx:for="{{tab}}" wx:key="index"
+                data-index="{{index}}" catchtap="tapSelect" data-level="0"
+          >{{item.name}}</view>
+        </view>
+
+        <view class="p tab_title">学科</view>
+        <view class="p tab_line">
+          <view class="p tab {{item.select ? 'tab_select' : ''}}" wx:for="{{tab[tabIndex1].children.subject}}" wx:key="index"
+                data-index="{{index}}" catchtap="tapSelect2" data-level="0"
+          >{{item.name}}</view>
+        </view>
+
+        <view class="p tab_title">年级</view>
+        <view class="p tab_line">
+          <view class="p tab {{item.select ? 'tab_select' : ''}}" wx:for="{{tab[tabIndex1].children.grade}}" wx:key="index"
+                data-index="{{index}}" catchtap="tapSelect3" data-level="0"
+          >{{item.name}}</view>
+        </view>
+      </view>
+
+      <view class="p btn_box3">
+        <button bindtap="goIndex" hover-class="none">随便看看</button>
+        <button wx:if="{{!hasUserPhone}}" hover-class="none" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">来联系我</button>
+        <button wx:else bindtap="contactMe" hover-class="none">来联系我</button>
+      </view>
+
+    </swiper-item>
+  </swiper>
+
+  <view wx:if="{{swiperIndex !== 6}}" class="p arrow"></view>
+  <view class="p bottom" bindtap="goNext"></view>
+
+</view>

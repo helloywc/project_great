@@ -1,0 +1,44 @@
+<view class="teacher-index ti">
+  <tab id="tab" tabs="{{tabs}}" activeIndex="{{activeIndex}}" bind:myevent="toggleToast" bind:setIndex="setIndex" isFixed="true"></tab>
+
+  <view class="page" style="padding-top:80rpx;height:calc(100vh - 80rpx);position:relative;">
+
+
+    <swiper class="ti swiper-box" current="{{tabIndex}}" bindchange="swiperChange">
+      <swiper-item class="ti swiper" wx:for="{{tabs}}" wx:key="index" wx:for-item="subject"
+                   data-index="{{index}}"
+      >
+
+        <!--<list id="list" hidden="{{activeIndex != 0}}"  style="max-height:calc(100vh - 80rpx);"-->
+              <!--text="还没有任何评论" imgUrl="https://7765-weixin-ruqmk-1258718101.tcb.qcloud.la/image/common_nocomment.png?sign=26f819e3f52ea9932552b133c3404542&t=1563431338"-->
+        <!--&gt;-->
+          <!--<view slot="list_slot">-->
+
+            <!--<view wx:for="{{teacher}}" wx:key="index2" wx:if="{{item.subject === tabs[index].value}}">-->
+
+        <scroll-view scroll-y="true" style="max-height:calc(100vh - 80rpx);">
+            <view wx:for="{{teacher}}" wx:key="index2" wx:if="{{item.subject === subject.value}}">
+
+              <navigator url="/pages/teacher/teacher-detail/teacher-detail?id={{item.id}}" class="ti info_box" bindtap="goTeatchDetail" hover-class="none">
+                <image class="ti pic" src="{{item.photo}}" lazy-load></image>
+                <view class="ti intro">
+                  <view class="ti name">{{item.name}}</view>
+                  <view class="ti experience">{{item.discribe[0]}}</view>
+                  <view class="ti experience">{{item.discribe[1]}}</view>
+                  <view class="ti experience">{{item.discribe[2]}}</view>
+                  <view class="ti motto">格言：{{item.motto}}</view>
+                </view>
+              </navigator>
+            </view>
+
+            <view class="" style="width:100%;height:100rpx;"></view>
+        </scroll-view>
+          <!--</view>-->
+        <!--</list>-->
+
+
+      </swiper-item>
+    </swiper>
+
+  </view>
+</view>

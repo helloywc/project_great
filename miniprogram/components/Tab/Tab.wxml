@@ -1,0 +1,8 @@
+<view class="weui-navbar {{isFixed ? 'weui-fixed' : ''}}" >
+  <block wx:for="{{tabs}}" wx:key="index">
+    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+      <view class="weui-navbar__title">{{item.title}}</view>
+    </view>
+  </block>
+  <view class="weui-navbar__slider" style="width:{{ 750 / tabs.length}}rpx;left: {{sliderLeft}}rpx; transform: translateX({{sliderOffset}}rpx); -webkit-transform: translateX({{sliderOffset}}rpx);"></view>
+</view>

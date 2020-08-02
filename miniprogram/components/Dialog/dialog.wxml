@@ -1,0 +1,48 @@
+<view class='wx_dialog_container' hidden="{{!isShow}}">
+  <view class='mask' catchtap="_cancelEvent"></view>
+  <view class='dialog'>
+
+
+    <!--普通-->
+    <view class='dialog-content' wx:if="{{!isCustom}}">{{ content }}</view>
+
+    <!--关注客服-->
+    <view class='dialog-content' wx:elif="{{isContact}}">
+
+      <view class="dialog-title">三部关注公众号</view>
+
+      <view class="dialog-contact">
+        <view class="dialog-number">1</view>
+        <image class="dialog-image" src="./image/pic_attention_1.png"></image>
+        <view class="dialog-text">点击"立即关注"按钮</view>
+      </view>
+      <view class="dialog-contact">
+        <view class="dialog-number">2</view>
+        <image class="dialog-image" src="./image/pic_attention_2.png"></image>
+        <view class="dialog-text">在输入框中回复"1"</view>
+      </view>
+      <view class="dialog-contact">
+        <view class="dialog-number">3</view>
+        <image class="dialog-image" src="./image/pic_attention_3.png"></image>
+        <view class="dialog-text">点开二维码扫描关注</view>
+      </view>
+    </view>
+
+    <!--拓展模式（自定义）-->
+    <view class='dialog-content' wx:else>
+      <slot name="dialog_slot">
+
+      </slot>
+    </view>
+
+
+    <view class='dialog-footer' wx:if="{{isContact}}">
+      <button class='dialog-btn dialog-btn-reverse' bindtap="killDialog" open-type="contact" hover-class="none" >立即关注</button>
+    </view>
+
+    <view class='dialog-footer' wx:else>
+      <view wx:if="{{hasCancel}}" class='dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
+      <view class='dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+    </view>
+  </view>
+</view>

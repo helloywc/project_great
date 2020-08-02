@@ -1,0 +1,94 @@
+<view class="test">
+<!--<form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">-->
+  <!--<button formType="submit" size="mini" type="primary">消息订阅</button>-->
+<!--</form>-->
+
+
+<!--<form bindsubmit="book" report-submit>-->
+  <!--<button form-type="submit" size="mini" type="primary">消息订阅2</button>-->
+<!--</form>-->
+
+
+
+<navigator url="/pages/present/present"  hover-class="none">
+  点这里能跳转象上邀请
+</navigator>
+
+
+<!--<button bindtap="contactMe" hover-class="none" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">来联系我</button>-->
+
+
+
+
+
+<view class=""></view>
+
+<view class="" wx:if="{{mobile}}">获取到手机号码：{{mobile}}</view>
+
+
+
+<!--<form bindsubmit="formSubmit" bindreset="formReset">-->
+  <!--<button formType="submit" size="mini" type="primary">消息订阅</button>-->
+<!--</form>-->
+
+
+  <view>获取用户</view>
+  <view>
+    <button size="mini" type="primary" bindtap="addUser">新增用户</button>
+    <button size="mini" type="primary" bindtap="updateUser">刷新用户</button>
+    <button size="mini" type="primary" bindtap="getUser">获取用户</button>
+  </view>
+
+  <view>订阅</view>
+  <view>
+    <button size="mini" type="primary" open-type="book4">一次性订阅2</button>
+    <button bindtap="book2" form-type="submit" size="mini" type="primary">一次性订阅</button>
+    <button bindtap="book3" form-type="submit" size="mini" type="primary">长期订阅</button>
+  </view>
+
+  <view>拓展功能</view>
+  <view>
+    <button size="mini" type="primary" hover-class="none" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机</button>
+    <button size="mini" type="primary" open-type="contact">客服会话</button>
+    <button size="mini" type="primary" bindtap="upload">上传素材</button>
+    <button size="mini" type="primary" bindtap="initMediaId">初始化mediaId</button>
+    <button size="mini" type="primary" bindtap="getMediaId">获取mediaId</button>
+    <button size="mini" type="primary" bindtap="addConsult">新增咨询</button>
+    <button size="mini" type="primary" bindtap="addConsult">爬虫</button>
+  </view>
+
+  <view>爬虫</view>
+  <view>
+    <button size="mini" type="primary" bindtap="scripy">抓取</button>
+  </view>
+
+
+  <view>初始化</view>
+  <view>
+    <button size="mini" type="primary" bindtap="initActivity">活动初始化</button>
+  </view>
+
+  <view>支付</view>
+  <view>
+    <button size="mini" type="primary" bindtap="pay">支付</button>
+  </view>
+
+  <view>二维码</view>
+  <view>
+    <button size="mini" type="primary" bindtap="getQRCode">二维码</button>
+  </view>
+
+<!--<view class="hi contact_box">-->
+  <!--<image class="hi contact_icon" src="/images/icon_contact_cancel.png"></image>-->
+  <!--<view class="hi contact_text">爱驰咨询一手掌握，活动福利不再错过</view>-->
+  <!--&lt;!&ndash;<button class="hi contact_btn" size="mini" open-type="contact">开启通知</button>&ndash;&gt;-->
+  <!--<button class="hi contact_btn" size="mini" bindtap="showNotice">开启通知</button>-->
+<!--</view>-->
+
+<!--<dialog id='dialog' title='取消订单'-->
+        <!--content='是否取消订单'-->
+        <!--confirm='确定取消' cancel="再看看" hasCancel="{{false}}" isCustom="{{false}}"-->
+        <!--bind:cancelEvent="_cancelEvent"-->
+        <!--bind:confirmEvent="_confirmEvent">-->
+<!--</dialog>-->
+</view>

@@ -1,0 +1,20 @@
+.teacher-index.ti{width:100%;height:100vh;background-color:#fff;}
+    .ti.info_box{width:calc(100% - 80rpx);padding:40rpx;border-bottom:1rpx solid #eee;}
+    .ti.pic{width:225rpx;height:225rpx;display:inline-block;vertical-align:top;}
+    .ti.intro{width:calc(100% - 225rpx - 40rpx);display:inline-block;vertical-align:top;margin-left:40rpx;}
+    .ti.name{font-size:36rpx;color:#666;margin-bottom:20rpx;}
+    .ti.experience{font-size:26rpx;color:#999;}
+    .ti.motto{font-size:26rpx;color:#999;margin-top:20rpx;}
+    .ti.swiper-box{height:calc(100vh - 80rpx);background-color:#fff;margin:0;padding:0;}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}
+    .ti.a{}

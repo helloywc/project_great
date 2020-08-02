@@ -1,0 +1,62 @@
+<view class="course-index ci">
+
+
+  <scroll-view class="ci info_box" scroll-y="true">
+
+    <view class="ci info" wx:if="{{courseDetail.name}}">
+      <view class="ci name" wx:if="{{courseDetail.name}}">{{courseDetail.subject}}{{courseDetail.name}}({{courseDetail.grade}})</view>
+
+      <view class="ci info_title" wx:if="{{courseDetail.plan}}"> <view class="ci info_line"></view>课程安排</view>
+      <view class="ci info_message"  wx:for="{{courseDetail.plan}}" wx:key="index">{{item}}</view>
+
+      <view class="ci info_title" wx:if="{{courseDetail.target}}"> <view class="ci info_line"></view>教学目标</view>
+      <view class="ci info_message"  wx:for="{{courseDetail.target}}" wx:key="index">{{item}}</view>
+
+      <view class="ci info_title" wx:if="{{courseDetail.unique}}"> <view class="ci info_line"></view>课程特色</view>
+      <view class="ci info_message"  wx:for="{{courseDetail.unique}}" wx:key="index">{{item}}</view>
+
+      <view class="ci info_title" wx:if="{{courseDetail.discribe}}"> <view class="ci info_line"></view>服务包括内容</view>
+      <view class="ci info_message"  wx:for="{{courseDetail.discribe}}" wx:key="index">{{item}}</view>
+
+
+      <button wx:if="{{!hasUserPhone}}" type="primary" class="ci info_btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">了解更多细节</button>
+      <button wx:else type="primary" class="ci info_btn" bindtap="knowMore">了解更多细节</button>
+
+      <view style="height:350rpx;"></view>
+    </view>
+
+    <view class="ci info_process" wx:else>
+      <image class="ci info_image" src="/images/pic_process.png"></image>
+      <view class="ci info_discribe">3-3-3教学服务体系，是象上•小学生精心开发的教学工具、创新的教学服务，不但更专业的指导家长，帮助学生课后巩固吸收、提高学生成绩、更能塑造小学生的良好的习惯方法。科学的考核体系的设计，更好的激发老师的热情与保证教学服务质量。</view>
+    </view>
+
+  </scroll-view>
+
+
+
+  <view class="ci bottom">
+
+    <!--获取用户信息-->
+    <button class="ci getuser" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">123123</button>
+
+    <view class="ci tab-box">
+      <view class="ci tab {{tabIndex === index ? 'tab-active' : ''}}" wx:for="{{tab}}" wx:key="index"
+            bindtap="tabSelect" data-index="{{index}}"
+      >{{item.title}}</view>
+    </view>
+
+
+
+
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange"
+            value="{{multiIndex}}" range="{{multiArray}}" class="ci navibox">
+      <view class="ci navi" wx:if="{{pickValue}}">{{pickValue}}</view>
+      <view class="ci navi" wx:else><text class="ci navibtn">点此 </text>选择您想了解的课程</view>
+
+      <!--<button class="ci button" type="primary" >了解更多象上名师</button>-->
+
+    </picker>
+  </view>
+
+
+</view>
