@@ -1,0 +1,13 @@
+
+
+
+<view class="index">
+  <swiper class="image-block" bindchange="swiperChange">
+    <swiper-item bindtap="showGallary" class="image-box" wx:for="{{listData}}" wx:key="index" wx:for-item="list">
+      <image src="{{list.image}}" ></image>
+    </swiper-item>
+  </swiper>
+  <view class="image-message">
+    <view wx:for="{{messageBox}}" wx:key="index">{{item}}</view>
+  </view>
+</view>

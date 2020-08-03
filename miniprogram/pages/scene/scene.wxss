@@ -1,0 +1,7 @@
+.index{position:relative;}
+.image-block {width:100%;height:100vh;background-color:#000;}
+.image-box {width:100%;height:100vh;position:relative;}
+.image-box image {width:100vw; height:calc(100vw / 9 * 16);position:relative;top:40%;transform:translate(0,-50%)}
+.image-message {width:100%;padding: 40rpx 0;position:absolute;bottom:0;left:0;background-color:rgba(0,0,0,0.6)}
+.image-message view{width:calc(100% - 80rpx);padding:10rpx 40rpx;color:#fff;}
+.suggest {color:#aaa;font-size:24rpx;text-align:center;position:absolute;top:70%;left:50%;transform:translate(-50%,0)}
