@@ -2,10 +2,10 @@
   <view class="w time" wx:if="{{count > 0}}">{{count}}</view>
   <view class="w logo_box">
     <view class="w greet">欢迎来到</view>
-    <image class="w logo" src="/images/logo_0.png"></image>
+    <view class="w logo title" src="/images/logo_0.png">格力特小屋</view>
   </view>
-  <view class="w btn_box">
-    <view class="w btn" bindtap="knowUs">了解象上</view>
-    <view class="w btn" bindtap="goIndex">进入首页</view>
-  </view>
+  <!--<view class="w btn_box">-->
+    <!--<view class="w btn" bindtap="knowUs">了解象上</view>-->
+    <!--<view class="w btn" bindtap="goIndex">进入首页</view>-->
+  <!--</view>-->
 </view>

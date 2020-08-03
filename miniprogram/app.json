@@ -1,28 +1,19 @@
 {
   "pages": [
     "pages/welcome/welcome",
+    "pages/project/project",
+    "pages/scene/scene",
     "pages/funtion/test/test",
     "pages/index/index",
     "pages/present/present",
-    "pages/centre/centre-detail/centre-detail",
-    "pages/centre/centre-index/centre-index",
-    "pages/course/course-detail/course-detail",
-    "pages/course/course-index/course-index",
-    "pages/student/student-detail/student-detail",
-    "pages/student/student-index/student-index",
-    "pages/teacher/teacher-detail/teacher-detail",
-    "pages/teacher/teacher-index/teacher-index",
-    "pages/hotspot/hotspot-detail/hotspot-detail",
-    "pages/hotspot/hotspot-index/hotspot-index",
-    "pages/funtion/operate-index/operate-index",
-    "pages/funtion/gallery/gallery",
-    "pages/funtion/blank/blank"
+    "pages/activity/activity",
+    "pages/navigator/navigator"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#e9418e",
-    "navigationBarTitleText": "象上小学生",
+    "navigationBarBackgroundColor": "#29abe2",
+    "navigationBarTitleText": "格力特全民运动",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -32,25 +23,25 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/hotspot/hotspot-index/hotspot-index",
+        "pagePath": "pages/project/project",
         "iconPath": "images/icon/icon_index_00.png",
         "selectedIconPath": "images/icon/icon_index_01.png",
         "text": "场馆效果"
       },
       {
-        "pagePath": "pages/course/course-index/course-index",
+        "pagePath": "pages/scene/scene",
         "iconPath": "images/icon/icon_index_10.png",
         "selectedIconPath": "images/icon/icon_index_11.png",
         "text": "场地实景"
       },
       {
-        "pagePath": "pages/teacher/teacher-index/teacher-index",
+        "pagePath": "pages/activity/activity",
         "iconPath": "images/icon/icon_index_20.png",
         "selectedIconPath": "images/icon/icon_index_21.png",
         "text": "最新优惠"
       },
       {
-        "pagePath": "pages/centre/centre-index/centre-index",
+        "pagePath": "pages/navigator/navigator",
         "iconPath": "images/icon/icon_index_30.png",
         "selectedIconPath": "images/icon/icon_index_31.png",
         "text": "园区导航"

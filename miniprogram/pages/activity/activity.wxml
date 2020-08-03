@@ -1,0 +1,33 @@
+<view style="width:100%;height:100vh;background-color:#fff;">
+
+  <view class="app">
+    <view class="wrapper">
+      <view class="content">
+        <view class="money">
+          <text>¥</text>9.9
+        </view>
+        <view class='co'>
+          <view class="title">2小时体验券</view>
+        </view>
+      </view>
+      <view class="split-line"></view>
+    </view>
+  </view>
+
+  <view class="use-box">
+    <view class="use-title">使用须知</view>
+    <view class="use-info">1. 本券使用时间截止至2020年8月31日</view>
+    <view class="use-info">2. 场馆目前提供篮球、羽毛球场地，预约篮球场地需使用3张体验券</view>
+    <view class="use-info">3. 每张体验券仅能预约一片场地</view>
+    <view class="use-info">4. 使用前需要先提前预约场地，避免排队</view>
+    <view class="use-info">5. 可复制添加格力特小助手：诗诗的微信，预约场地或咨询更多信息
+      <view class="copy-btn" bindtap="copyWechat">复制微信</view>
+    </view>
+  </view>
+
+  <view class="btn-box">
+    <view class="btn" bindtap="getNow" style="{{ticket ? '' : 'background-color:#ccc'}}">{{btnName}}</view>
+    <view class="btn" bindtap="contactMe">预约场地</view>
+  </view>
+
+</view>

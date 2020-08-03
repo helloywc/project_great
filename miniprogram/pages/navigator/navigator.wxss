@@ -1,0 +1,13 @@
+.centre-index.ci{}
+.ci.map{width:100%;height:100vh;}
+.ci.label_box{width:calc(100% - 90rpx);height:230rpx;padding:30rpx 45rpx;background-color:#fff;position:absolute;left:0;bottom:0;}
+.ci.title{font-size:36rpx;color:#29abe2;display:flex;flex-direction:row;justify-content: space-between}
+.ci.address{font-size:26rpx;color:#666;margin:10rpx 0;}
+.ci.message{font-size:22rpx;color:#aaa;}
+.ci.distance{font-size:20rpx;color:#999;}
+.ci.btn_box{}
+.ci.btn{display:inline-block;padding:30rpx 30rpx;}
+.ci.btn_title{font-size:24rpx;line-height:40rpx;color:#999;vertical-align:middle;}
+.ci.btn_icon{width:40rpx;height:40rpx;margin-right:20rpx;vertical-align:middle;}
+.ci.label_suggest{width:calc(100% - 90rpx);height:50rpx;padding:20rpx 45rpx;background-color:#fff;position:absolute;left:0;bottom:0;font-size:28rpx;color:#999;text-align:center;}
+.ci.near{color:#29abe2}

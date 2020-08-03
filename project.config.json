@@ -127,6 +127,27 @@
 					"id": -1,
 					"name": "二维码测试",
 					"pathName": "pages/student/student-detail/student-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navigator/navigator",
+					"pathName": "pages/navigator/navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/project/project",
+					"pathName": "pages/project/project",
 					"scene": null
 				}
 			]

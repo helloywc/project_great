@@ -35,7 +35,7 @@ Page({
     console.log(123)
     this.clearTimeline();
     wx.switchTab({
-      url:'/pages/hotspot/hotspot-index/hotspot-index'
+      url:'/pages/project/project'
     })
   },
   knowUs(){

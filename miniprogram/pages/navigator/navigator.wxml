@@ -1,0 +1,43 @@
+<view class="index">
+  <map id="map"
+       class="ci map"
+       subkey="{{subKey}}"
+       longitude="{{longitude}}"
+       latitude="{{latitude}}"
+       scale="11"
+       controls="{{controls}}"
+       bindcontroltap="controltap"
+       markers="{{markers}}"
+       polyline="{{polyline}}"
+       bindregionchange="regionchange"
+       show-location
+  >
+
+  </map>
+
+
+  <view class="ci label_box" >
+    <view class="ci title">
+      <text>{{target.name || '-'}}</text>
+      <!--<text class="ci distance" wx:if="{{selectMarker.distance}}">{{selectMarker.distance}}km</text>-->
+    </view>
+    <view class="ci address">{{target.address || '-'}}</view>
+    <view class="ci message">充足车位，免费停车（需提前预约）</view>
+    <view class="ci message">地铁1号线通河新村 2.5km / 地铁3号线长江南路 2km</view>
+    <view class="ci btn_box">
+      <view class="ci btn" bindtap="navigation">
+        <image class="ci btn_icon" src="/images/icon_centre_1.png"></image>
+        <text class="ci btn_title">地图导航</text>
+      </view>
+      <view class="ci btn" bindtap="showDetail">
+        <image class="ci btn_icon" src="/images/icon_centre_3.png"></image>
+        <text class="ci btn_title">园区指引</text>
+      </view>
+      <view class="ci btn" bindtap="contactCentre">
+        <image class="ci btn_icon" src="/images/icon_centre_2.png"></image>
+        <text class="ci btn_title">服务咨询</text>
+      </view>
+
+    </view>
+  </view>
+</view>
